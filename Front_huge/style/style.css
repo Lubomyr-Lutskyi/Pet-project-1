@@ -1,0 +1,59 @@
+nav {
+   margin-bottom: 50px;
+}
+
+article {
+   padding: 20px;
+   margin: 10px 0;
+}
+
+.top {
+   padding-bottom: 10px;
+}
+
+/* Кнопка скрол  */
+.up {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+
+   cursor: pointer;
+
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+   border: 10px solid #ececed;
+   display: none;
+   /* Следующие 4 пункта отвечают за плавное появление кнопки */
+   opacity: 0;
+   animation: ani 2s forwards;
+}
+
+@keyframes ani {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+.up:hover {
+   border: none;
+}
+
+.up-show {
+   display: block;
+}
+
+/* ==== Форма === */
+
+.form-dropdown {
+   padding: 30px;
+   border-radius: 10px;
+}
+
+.form-dropdown:hover {
+   background-color: #f4f4f4;
+}

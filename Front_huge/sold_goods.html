@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style/css/pico.css">
+   <link rel="stylesheet" href="style/style.css">
+   <title>Huge</title>
+</head>
+
+<body>
+   <main>
+      <div class="container">
+
+         <nav>
+            <ul>
+               <li><strong>CRM</strong></li>
+            </ul>
+            <ul>
+
+               <li><a href="statistics_sales.html">Статистика продаж</a></li>
+               <li><a href="sold_goods.html" role="button">Все продажи</a></li>
+            </ul>
+         </nav>
+
+
+         <details class="form-dropdown">
+            <summary>Добавить продажу</summary>
+            <form id="form" method="POST" action="/sold_goods/add_sold">
+               <div class="grid">
+                  <label for="Customer">
+                     Заказчик
+                     <input type="text" id="customer" name="Customer" placeholder="Заказчик" required>
+                  </label>
+
+                  <label for="Phone">
+                     Телефон
+                     <input type="text" id="phone" name="Phone" placeholder="Телефон" required>
+                  </label>
+
+                  <label for="City">
+                     Город
+                     <input type="text" id="city" name="City" placeholder="Город" required>
+                  </label>
+               </div>
+
+
+               <div class="grid">
+                  <label for="Goods">
+                     Товар
+                     <input type="text" id="goods" name="Goods" placeholder="Товар" required>
+                  </label>
+
+                  <label for="Amount">
+                     Количество
+                     <input type="text" id="amount" name="Amount" placeholder="Количество" required>
+                  </label>
+
+                  <label for="Sum">
+                     Сумма
+                     <input type="text" id="sum" name="Sum" placeholder="Сумма" required>
+                  </label>
+               </div>
+
+               <button type="submit" id="btn_add">Добавить</button>
+            </form>
+         </details>
+
+         <div class="grid select">
+            <select id="select_by_goods"></select>
+            <select id="select_by_city"></select>
+            <select id="select_by_customer"></select>
+
+            <!-- <button type="submit" id="btn_filter">фильтровать</button> -->
+         </div>
+
+         <div id="out"></div>
+
+         <button id="up" class="up">Up</button>
+      </div>
+   </main>
+
+   <script type="module" src="scripts/soldGoods/addSoldGoods.js"></script>
+   <script type="module" src="scripts/soldGoods/showSoldGoods.js"></script>
+   <script type="module" src="scripts/soldGoods/select.js"></script>
+   <script type="module" src="scripts/windowsScrollUp.js"></script>
+</body>
+
+</html>
