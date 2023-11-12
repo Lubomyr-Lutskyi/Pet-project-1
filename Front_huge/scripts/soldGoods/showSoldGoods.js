@@ -46,6 +46,9 @@ for (let i = 0; i < resp.customer.length; i++) {
    div_bottom.appendChild(div_amount)
    div_bottom.appendChild(div_sum)
 
+   // let div_settings = document.createElement("button")
+   // div_settings.innerHTML = 
+
 
    let article = document.createElement("article")
    article.appendChild(div_top)

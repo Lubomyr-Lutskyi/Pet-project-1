@@ -15,19 +15,19 @@
 
          <nav>
             <ul>
-               <li><strong>CRM</strong></li>
+               <li class="logo"><strong>CRM</strong></li>
             </ul>
             <ul>
 
-               <li><a href="statistics_sales.html">Статистика продаж</a></li>
-               <li><a href="sold_goods.html" role="button">Все продажи</a></li>
+               <li id="bt_stat"><a href="statistics_sales.html" role='button' class="outline">Статистика продаж</a></li>
+               <li id="bt_sales"><a href="Sold_goods.html" role='button'>Все продажи</a></li>
             </ul>
          </nav>
 
 
          <details class="form-dropdown">
             <summary>Добавить продажу</summary>
-            <form id="form" method="POST" action="/sold_goods/add_sold">
+            <form id="form" class="form" method="POST" action="/sold_goods/add_sold">
                <div class="grid">
                   <label for="Customer">
                      Заказчик
@@ -63,7 +63,7 @@
                   </label>
                </div>
 
-               <button type="submit" id="btn_add">Добавить</button>
+               <button type="submit" id="add">Добавить</button>
             </form>
          </details>
 
@@ -72,7 +72,6 @@
             <select id="select_by_city"></select>
             <select id="select_by_customer"></select>
 
-            <!-- <button type="submit" id="btn_filter">фильтровать</button> -->
          </div>
 
          <div id="out"></div>
@@ -83,7 +82,6 @@
 
    <script type="module" src="scripts/soldGoods/addSoldGoods.js"></script>
    <script type="module" src="scripts/soldGoods/showSoldGoods.js"></script>
-   <script type="module" src="scripts/soldGoods/select.js"></script>
    <script type="module" src="scripts/windowsScrollUp.js"></script>
 </body>
 

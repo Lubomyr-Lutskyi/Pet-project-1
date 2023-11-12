@@ -3,15 +3,14 @@ nav {
 }
 
 article {
-   padding: 20px;
-   margin: 10px 0;
+   padding: 40px;
+   margin: 20px 0;
 }
 
 .top {
-   padding-bottom: 10px;
+   padding-bottom: 20px;
 }
 
-/* Кнопка скрол  */
 .up {
    width: 100px;
    height: 100px;
@@ -47,7 +46,7 @@ article {
    display: block;
 }
 
-/* ==== Форма === */
+/* === Селект в для сортировки === */
 
 .form-dropdown {
    padding: 30px;
