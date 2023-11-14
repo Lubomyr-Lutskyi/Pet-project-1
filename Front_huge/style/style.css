@@ -23,7 +23,6 @@ article {
    right: 50px;
    border: 10px solid #ececed;
    display: none;
-   /* Следующие 4 пункта отвечают за плавное появление кнопки */
    opacity: 0;
    animation: ani 2s forwards;
 }
@@ -46,7 +45,6 @@ article {
    display: block;
 }
 
-/* === Селект в для сортировки === */
 
 .form-dropdown {
    padding: 30px;
@@ -55,4 +53,44 @@ article {
 
 .form-dropdown:hover {
    background-color: #f4f4f4;
+}
+
+.btn-set {
+   width: 45px;
+   height: 45px;
+   padding: 10px;
+   font-size: 10px;
+   /* border: none;
+   cursor: pointer; */
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   overflow: auto;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+.dropdown a:hover {
+   background-color: #ddd;
+}
+
+.show {
+   display: block; 
 }

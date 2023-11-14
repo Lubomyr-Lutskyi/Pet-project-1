@@ -2,9 +2,8 @@ import { SERVER } from "../server.js"
 
 import { customer, phone, city, goods, amount, sum, formAction, btn_add } from "../ui.js"
 
-btn_add.addEventListener("click", (e) => {
-   e.preventDefault(e)
-
+   btn_add.addEventListener("onclick", (e) => {
+      e.preventDefault(e)
    fetch(SERVER + formAction, {
       method: "post",
       headers: {
