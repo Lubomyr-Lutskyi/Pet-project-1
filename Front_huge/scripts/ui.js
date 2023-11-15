@@ -11,8 +11,6 @@ export const btn_add = document.querySelector("#btn_add")
 export const btn_filter = document.querySelector("#btn_filter")
 
 export const btn_menu = document.querySelector("#btn_menu")
-export const btn_exit = document.querySelector("#btn_exit")
-export const btn_done = document.querySelector("#btn_done")
 export const dropdow = document.querySelector("#dropdown")
 
 

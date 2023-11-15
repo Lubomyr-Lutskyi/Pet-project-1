@@ -5,10 +5,31 @@ nav {
 article {
    padding: 40px;
    margin: 20px 0;
+   display: flex;
+}
+
+.div_boxes{
+   flex: 1 0 auto;
 }
 
 .top {
-   padding-bottom: 20px;
+   /* padding-bottom: 20px; */
+   width: 80%;
+}
+
+.bottom{
+   width: 80%;
+
+}
+
+.poss {
+   display: auto;
+   /* width: 80%; */
+}
+
+
+.right {
+flex: 0 0 auto;
 }
 
 .up {
@@ -55,13 +76,19 @@ article {
    background-color: #f4f4f4;
 }
 
-.btn-set {
+.btn_set {
    width: 45px;
    height: 45px;
    padding: 10px;
    font-size: 10px;
    /* border: none;
    cursor: pointer; */
+   background-color: #fff;
+   border-radius: 50%;
+}
+
+.btn_set:hover {
+   background-color: var(--primary);
 }
 
 .dropdown {
@@ -92,5 +119,17 @@ article {
 }
 
 .show {
-   display: block; 
+   display: block;
+}
+
+.a {
+   width: 100px;
+   border: 1px solid red;
+   position: relative;
+   justify-content: right;
+}
+
+.art {
+   display: flex;
+   justify-content: space-between;
 }
