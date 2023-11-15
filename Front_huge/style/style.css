@@ -2,18 +2,27 @@ nav {
    margin-bottom: 50px;
 }
 
+/* === Карточка покупця === */
+
 article {
-   padding: 40px;
+   padding: 0px;
    margin: 20px 0;
    display: flex;
 }
 
 .div_boxes{
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
    flex: 1 0 auto;
+   padding: 20px 40px 30px 40px;
 }
 
+/* === Час === */
+.div_time{
+   padding-bottom: 20px ;
+}
 .top {
-   /* padding-bottom: 20px; */
    width: 80%;
 }
 
@@ -22,15 +31,15 @@ article {
 
 }
 
-.poss {
-   display: auto;
-   /* width: 80%; */
-}
-
+/* === Блок кнопки меню ==== */
 
 .right {
 flex: 0 0 auto;
+padding: 20px;
 }
+
+
+/* === Кнопка скрол ==== */
 
 .up {
    width: 100px;
@@ -76,20 +85,24 @@ flex: 0 0 auto;
    background-color: #f4f4f4;
 }
 
+/* === Кнопка налаштування ==== */
+
 .btn_set {
-   width: 45px;
-   height: 45px;
+   width: 40px;
+   height: 40px;
    padding: 10px;
-   font-size: 10px;
    /* border: none;
    cursor: pointer; */
    background-color: #fff;
-   border-radius: 50%;
+   border-radius: 100%;
+   margin-bottom: 5px;
 }
 
 .btn_set:hover {
    background-color: var(--primary);
 }
+
+/* === Випадаюче меню ==== */
 
 .dropdown {
    position: relative;
@@ -99,19 +112,20 @@ flex: 0 0 auto;
 
 .dropdown-content {
    display: none;
-   position: absolute;
+   position: sticky;
    background-color: #f1f1f1;
-   min-width: 160px;
    overflow: auto;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
 }
 
 .dropdown-content a {
+   position: relative;
    color: black;
    padding: 12px 16px;
    text-decoration: none;
    display: block;
+   font-size: 16px;
 }
 
 .dropdown a:hover {
@@ -122,14 +136,4 @@ flex: 0 0 auto;
    display: block;
 }
 
-.a {
-   width: 100px;
-   border: 1px solid red;
-   position: relative;
-   justify-content: right;
-}
-
-.art {
-   display: flex;
-   justify-content: space-between;
-}
+/* === */

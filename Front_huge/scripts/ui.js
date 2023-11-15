@@ -10,9 +10,6 @@ export let sum = document.querySelector("#sum")
 export const btn_add = document.querySelector("#btn_add")
 export const btn_filter = document.querySelector("#btn_filter")
 
-export const btn_menu = document.querySelector("#btn_menu")
-export const dropdow = document.querySelector("#dropdown")
-
 
 
 
