@@ -1,5 +1,5 @@
 import { SERVER } from "../server.js"
-
+// import { filterInp } from "../ui"
 
 // fetch(SERVER + "/sold_goods/all_customer").then(function (response) {
 //    response.json().then(resp => {
@@ -23,25 +23,25 @@ for (let i = 0; i < resp.customer.length; i++) {
 
 
    let div_customer = document.createElement("div")
-   div_customer.innerHTML = 'resp.customer[i]'
+   div_customer.innerHTML = resp.customer[i]
 
    let div_phone = document.createElement("div")
-   div_phone.innerHTML = 'resp.phone[i]'
+   div_phone.innerHTML = resp.phone[i]
 
    let div_city = document.createElement("div")
-   div_city.innerHTML = 'resp.city[i]'
+   div_city.innerHTML = resp.city[i]
 
    let div_top = document.createElement("div")
    div_top.classList.add('grid', "top", "poss")
 
    let div_goods = document.createElement("div")
-   div_goods.innerHTML = 'resp.goods[i]'
+   div_goods.innerHTML = resp.goods[i]
 
    let div_amount = document.createElement("div")
-   div_amount.innerHTML = 'resp.amount[i]'
+   div_amount.innerHTML = resp.amount[i]
 
    let div_sum = document.createElement("div")
-   div_sum.innerHTML = 'resp.sum[i]'
+   div_sum.innerHTML = resp.sum[i]
 
    let div_bottom = document.createElement("div")
    div_bottom.classList.add('grid', "bottom", "poss")
@@ -106,6 +106,20 @@ for (let i = 0; i < resp.customer.length; i++) {
 
    btn_set.addEventListener("click", myFunc);
 
+   //  Закрити список,якщо був зроблений клік за межою кнопки
+
+   // window.onclick = function (event) {
+   //    if (!event.target.matches('.btn_set')) {
+   //       var dropdowns = document.getElementsByClassName("dropdown-content");
+   //       var i;
+   //       for (i = 0; i < dropdowns.length; i++) {
+   //          var openDropdown = dropdowns[i];
+   //          if (openDropdown.classList.contains('show')) {
+   //             openDropdown.classList.remove('show');
+   //          }
+   //       }
+   //    }
+   // }
 } // chickle
 
 //    })
@@ -115,32 +129,41 @@ function myFunc() {
    document.querySelector('.dropdown-content').classList.toggle("show");
 };
 
-// window.onclick = function (event) {
-//    if (!event.target.matches('.btn_set')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       var i;
-//       for (i = 0; i < dropdowns.length; i++) {
-//          var openDropdown = dropdowns[i];
-//          if (openDropdown.classList.contains('show')) {
-//             openDropdown.classList.remove('show');
-//          }
-//       }
-//    }
-// }
+
+
+//  === Block Filter ===
+
+window.onload = FilterCity("#inputCity", ".ull li")
+FilterCity("#inputName", ".ull-name li")
+FilterCity("#inputGoods", ".ull-goods li")
+function FilterCity(index, clas) {
+   let inpFilter = document.querySelector(index)
+
+   inpFilter.oninput = function () {
+      let value = this.value.trim();
+      let listt = document.querySelectorAll(clas)
+
+      if (value) {
+         listt.forEach(elem => {
+            if (elem.innerText.search(value) == -1) {
+               elem.classList.add('hide')
+            }
+         })
+      } else {
+         listt.forEach(elem => {
+            elem.classList.remove('hide')
+         })
+      }
+   }
+
+}
 
 
 
 
-// let menu_option = document.createElement('div')
-// let menu_link = document.createElement('a')
-// menu_link.href = '#1';
-
-// div_option.innerHTML = btn_set;
-// article.append(menu_link);
-
-// btn_set.appendChild(menu_link);
 
 
 
-//  Закрити список,якщо був зроблений клік за межою кнопки
+
+
 

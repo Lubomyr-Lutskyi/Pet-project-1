@@ -10,23 +10,24 @@ article {
    display: flex;
 }
 
-.div_boxes{
+.div_boxes {
    display: inline-flex;
    flex-direction: column;
    align-items: center;
    flex: 1 0 auto;
-   padding: 20px 40px 30px 40px;
+   padding: 20px 40px 50px 40px;
 }
 
 /* === Час === */
-.div_time{
-   padding-bottom: 20px ;
+.div_time {
+   padding-bottom: 20px;
 }
+
 .top {
    width: 80%;
 }
 
-.bottom{
+.bottom {
    width: 80%;
 
 }
@@ -34,8 +35,9 @@ article {
 /* === Блок кнопки меню ==== */
 
 .right {
-flex: 0 0 auto;
-padding: 20px;
+   flex: 0 0 auto;
+   padding: 20px;
+
 }
 
 
@@ -96,6 +98,7 @@ padding: 20px;
    background-color: #fff;
    border-radius: 100%;
    margin-bottom: 5px;
+
 }
 
 .btn_set:hover {
@@ -112,11 +115,14 @@ padding: 20px;
 
 .dropdown-content {
    display: none;
-   position: sticky;
+   position: absolute;
    background-color: #f1f1f1;
-   overflow: auto;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
+   width: 150px;
+   height: 100px;
+   right: 18px;
+   top: 63px;
 }
 
 .dropdown-content a {
@@ -136,4 +142,20 @@ padding: 20px;
    display: block;
 }
 
-/* === */
+/* === Block Filter === */
+
+/* .block-filter {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+} */
+
+.hide {
+   display: none;
+}
+
+ol{
+   list-style-type:  none;
+}
