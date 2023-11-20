@@ -76,6 +76,7 @@ for (let i = 0; i < resp.customer.length; i++) {
    div_option.classList.add('right', 'grid')
    btn_set.classList.add('right')
    btn_set.classList.add('btn_set')
+   btn_set.classList.add('btnSet')
    btn_img.classList.add('btn_img')
    btn_img.classList.add('grid')
 
@@ -83,6 +84,7 @@ for (let i = 0; i < resp.customer.length; i++) {
 
    let menu_option = document.createElement('div');
    menu_option.classList.add('dropdown-content');
+   menu_option.id = i;
 
    div_option.classList.add('dropdown');
 
@@ -103,31 +105,35 @@ for (let i = 0; i < resp.customer.length; i++) {
    menu_option.appendChild(menu_a2);
    div_option.appendChild(menu_option)
 
-
-   btn_set.addEventListener("click", myFunc);
-
    //  Закрити список,якщо був зроблений клік за межою кнопки
 
-   // window.onclick = function (event) {
-   //    if (!event.target.matches('.btn_set')) {
-   //       var dropdowns = document.getElementsByClassName("dropdown-content");
-   //       var i;
-   //       for (i = 0; i < dropdowns.length; i++) {
-   //          var openDropdown = dropdowns[i];
-   //          if (openDropdown.classList.contains('show')) {
-   //             openDropdown.classList.remove('show');
-   //          }
-   //       }
-   //    }
-   // }
+   window.onclick = function (event) {
+      if (!event.target.matches('.btn_img')) {
+         var dropdowns = document.getElementsByClassName("dropdown-content");
+         var i;
+         for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+            }
+         }
+      }
+   }
+
+
+   btn_set.addEventListener("click", toggleDropdown(i));
 } // chickle
 
 //    })
 // })
 
-function myFunc() {
-   document.querySelector('.dropdown-content').classList.toggle("show");
+function toggleDropdown(id) {
+   return function () {
+      const ll = document.getElementById(`${id}`);
+      ll.classList.toggle("show");
+   }
 };
+
 
 
 
