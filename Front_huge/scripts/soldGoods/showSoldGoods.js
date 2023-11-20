@@ -71,7 +71,7 @@ for (let i = 0; i < resp.customer.length; i++) {
    let div_option = document.createElement('div');
    let btn_set = document.createElement('button');
    let btn_img = document.createElement('img');
-   btn_img.src = '/Front_huge/img/Gear-icon.svg';
+   btn_img.src = 'https://cdn.iconscout.com/icon/free/png-256/free-gear-3604249-3003892.png';
 
    div_option.classList.add('right', 'grid')
    btn_set.classList.add('right')
