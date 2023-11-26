@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "cors": "^2.8.5"
+    "@selectize/selectize": "^0.15.2",
+    "cors": "^2.8.5",
+    "microplugin": "^0.0.3"
   }
 }

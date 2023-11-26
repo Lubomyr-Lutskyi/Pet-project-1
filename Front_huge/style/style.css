@@ -143,18 +143,38 @@ article {
 
 /* === Block Filter === */
 
-/* .block-filter {
-   position: relative;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: center;
-} */
+.block-filter {
+   display: grid;
+   grid-auto-columns: 50px;
+   grid-template-columns: repeat(3, 1fr) auto;
+}
 
 .hide {
    display: none;
 }
 
-ol{
-   list-style-type:  none;
+.UUD {
+   display: none;
+}
+
+ol {
+   list-style-type: none;
+   height: 100px;
+   overflow: scroll;
+   overflow-x: hidden;
+   /* display: none; */
+}
+
+/*  === Кнопка фильтр === */
+
+.btnfilter {
+   width: 60px;
+   height: 60px;
+   padding: 9px;
+   background-color: #fff;
+}
+
+.btnfilter:hover {
+   background-color: var(--primary);
+   transition: all 600ms;
 }

@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style/css/pico.css">
    <link rel="stylesheet" href="style/style.css">
+   <!-- <link rel="stylesheet" href="/node_modules/@selectize/selectize/dist/css/selectize.default.css"> -->
    <title>Huge</title>
 </head>
 
@@ -97,35 +98,49 @@
             </details>
         </div> -->
 
-            <div class="block-filter grid">
+         <div class="block-filter grid">
 
-               <div class="city-filt">
-                  <input type="text" id="inputCity" class="inputcity" placeholder="Місто">
-                  <ol class="ull">
-                     <li>Київ</li>
-                     <li>Житомир</li>
-                     <li>Харків</li>                     
-                  </ol>
-               </div>
-
-               <div class="name-filter">
-                  <input type="text" id="inputName" class="inputname" placeholder="Ім'я">
-                  <ol class="ull-name">
-                     <li>Олек</li>
-                     <li>Оксана</li>
-                     <li>Женя</li>
-                  </ol>
-               </div>
-
-               <div class="goods-filter">
-                  <input type="text" id="inputGoods" class="inputgoods" placeholder="Товар">
-                  <ol class="ull-goods">
-                     <li>Телефон</li>
-                     <li>Навушники</li>
-                     <li>Чохол</li>
-                  </ol>
-               </div>
+            <div class="city-filt">
+               <select name="" id="inputCity" class="select__city" placeholder="Виберіть місто">
+                  <option  hidden>Виберіть місто</option>
+                  <option value="367">Київ</option>
+                  <option value="340">Черкаси</option>
+                  <option value="369">Умань</option>
+                  <option value="370">Сталінград</option>
+                  <option value="371">Агидель</option>
+               </select>
             </div>
+
+            <div class="name-filter">
+               <select name="" id="inputName" class="selectname" placeholder="Напишіть ім'я">
+                  <option  hidden>Виберіть ім'я</option>
+                  <option value="">Оля</option>
+                  <option value="">Влад</option>
+                  <option value="">Олексій</option>
+                  <option value="">Адель</option>
+                  <option value="">Олександр</option>
+               </select>
+            </div>
+
+            <div class="goods-filter">
+               <select name="Товар" id="inputGoods" class="inputgoods" placeholder="Виберіть товар">
+                  <option  hidden>Виберіть товар</option>
+                  <option value="367">Iphone Xs</option>
+                  <option value="340">MacBook AIR PRO</option>
+                  <option value="369">Power lighting</option>
+                  <option value="370">Chose</option>
+                  <option value="371">Bread</option>
+               </select>
+            </div>
+
+            <!-- Кнопка фильтрации  -->
+            <div class="div-btn-filter grid">
+               <button class="btnfilter">
+                  <img src="https://www.svgrepo.com/show/502669/filter-1.svg" alt="">
+               </button>
+            </div>
+
+         </div>
 
 
 
@@ -138,6 +153,7 @@
    <script type="module" src="scripts/soldGoods/addSoldGoods.js"></script>
    <script type="module" src="scripts/soldGoods/showSoldGoods.js"></script>
    <script type="module" src="scripts/windowsScrollUp.js"></script>
+   <!-- <script type="module" src="/node_modules/@selectize/selectize/dist/js/selectize.min.js"></script> -->
 </body>
 
 </html>

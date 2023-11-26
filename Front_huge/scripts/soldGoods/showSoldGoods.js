@@ -1,4 +1,5 @@
 import { SERVER } from "../server.js"
+// import crypto from "crypto";
 // import { filterInp } from "../ui"
 
 // fetch(SERVER + "/sold_goods/all_customer").then(function (response) {
@@ -41,7 +42,7 @@ for (let i = 0; i < resp.customer.length; i++) {
    div_amount.innerHTML = resp.amount[i]
 
    let div_sum = document.createElement("div")
-   div_sum.innerHTML = resp.sum[i]
+   div_sum.innerHTML = resp.sum[i] + " шт."
 
    let div_bottom = document.createElement("div")
    div_bottom.classList.add('grid', "bottom", "poss")
@@ -51,6 +52,15 @@ for (let i = 0; i < resp.customer.length; i++) {
 
    let article = document.createElement("article")
 
+   let UUD = document.createElement('div')
+   UUD.classList.add("hide")
+   UUD = crypto.randomUUID()
+   // out.appendChild(UUD)
+   out.append(UUD,'hide')
+
+
+   // article.appendChild(UUD);
+   // UUD.appendChild(article)
    div_box.appendChild(div_time)
    div_box.appendChild(div_top);
    div_box.appendChild(div_bottom);
@@ -65,7 +75,6 @@ for (let i = 0; i < resp.customer.length; i++) {
    article.appendChild(div_box)
 
    out.appendChild(article)
-
    // === Кнопка налаштування ===
 
    let div_option = document.createElement('div');
@@ -122,6 +131,13 @@ for (let i = 0; i < resp.customer.length; i++) {
 
 
    btn_set.addEventListener("click", toggleDropdown(i));
+
+   // === Фільтр ===
+   FilterCard("")
+   function FilterCard(selecd, clas) {
+
+   }
+
 } // chickle
 
 //    })
@@ -129,8 +145,8 @@ for (let i = 0; i < resp.customer.length; i++) {
 
 function toggleDropdown(id) {
    return function () {
-      const ll = document.getElementById(`${id}`);
-      ll.classList.toggle("show");
+      const listMenu = document.getElementById(`${id}`);
+      listMenu.classList.toggle("show");
    }
 };
 
@@ -164,6 +180,13 @@ function FilterCity(index, clas) {
 
 }
 
+// $(document).ready(function(){
+// 	$('.select__city').selectize();
+// });
+
+// $(function () {
+//    $("select__city").selectize(options);
+// });
 
 
 
