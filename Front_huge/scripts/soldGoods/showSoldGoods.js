@@ -1,6 +1,4 @@
 import { SERVER } from "../server.js"
-// import crypto from "crypto";
-// import { filterInp } from "../ui"
 
 // fetch(SERVER + "/sold_goods/all_customer").then(function (response) {
 //    response.json().then(resp => {
@@ -49,18 +47,10 @@ for (let i = 0; i < resp.customer.length; i++) {
 
    let div_box = document.createElement('div');
    div_box.classList.add('div_boxes');
+   div_box.id = crypto.randomUUID();
 
    let article = document.createElement("article")
 
-   let UUD = document.createElement('div')
-   UUD.classList.add("hide")
-   UUD = crypto.randomUUID()
-   // out.appendChild(UUD)
-   out.append(UUD,'hide')
-
-
-   // article.appendChild(UUD);
-   // UUD.appendChild(article)
    div_box.appendChild(div_time)
    div_box.appendChild(div_top);
    div_box.appendChild(div_bottom);
@@ -132,12 +122,6 @@ for (let i = 0; i < resp.customer.length; i++) {
 
    btn_set.addEventListener("click", toggleDropdown(i));
 
-   // === Фільтр ===
-   FilterCard("")
-   function FilterCard(selecd, clas) {
-
-   }
-
 } // chickle
 
 //    })
@@ -149,50 +133,3 @@ function toggleDropdown(id) {
       listMenu.classList.toggle("show");
    }
 };
-
-
-
-
-//  === Block Filter ===
-
-window.onload = FilterCity("#inputCity", ".ull li")
-FilterCity("#inputName", ".ull-name li")
-FilterCity("#inputGoods", ".ull-goods li")
-function FilterCity(index, clas) {
-   let inpFilter = document.querySelector(index)
-
-   inpFilter.oninput = function () {
-      let value = this.value.trim();
-      let listt = document.querySelectorAll(clas)
-
-      if (value) {
-         listt.forEach(elem => {
-            if (elem.innerText.search(value) == -1) {
-               elem.classList.add('hide')
-            }
-         })
-      } else {
-         listt.forEach(elem => {
-            elem.classList.remove('hide')
-         })
-      }
-   }
-
-}
-
-// $(document).ready(function(){
-// 	$('.select__city').selectize();
-// });
-
-// $(function () {
-//    $("select__city").selectize(options);
-// });
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.select-box {
+    position: relative;
+
+}
+
+.select-option {
+    position: relative;
+}
+
+.select-option input {
+    width: 100%;
+    background-color: #ffffff;
+    columns: #000;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 15px 20px;
+    border-color: var(--primary);
+}
+
+.select-option::after {
+    content: "";
+    border-top: 12px solid #000;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    right: 15px;
+    top: 45%;
+    margin-top: -10px;
+}
+
+.content {
+    background-color: #eeeeee;
+    position: absolute;
+    color: #000;
+    border-radius: 7px;
+    /* margin-top: 0px; */
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+
+
+.search input {
+    width: 100%;
+    font-size: 17px;
+    padding: 15px;
+    outline: 0;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+}
+
+/* === Випадаючий список (БЛОК ul ) ==== */
+.options {
+    /* margin-top: 10px; */
+    max-height: 250px;
+    overflow: auto;
+    padding: 0;
+}
+
+/* === Налаштування li ( дизайн ) */
+.options li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: var(--primary);
+}
+
+/* === js === */
+
+.select-box.active .content {
+    display: block;
+}
+
+.select-box.active .select-option:after {
+    transform: rotate(-180deg);
+}
+
+.filter-name{
+    border-color: var(--primary);
+}

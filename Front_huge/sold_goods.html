@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style/css/pico.css">
    <link rel="stylesheet" href="style/style.css">
-   <!-- <link rel="stylesheet" href="/node_modules/@selectize/selectize/dist/css/selectize.default.css"> -->
+   <link rel="stylesheet" href="style/filter.css">
    <title>Huge</title>
 </head>
 
@@ -69,68 +69,92 @@
          </details>
 
          <!-- === Селект на филтрацию === -->
-         <!-- <div class="grid">
-            <details role="list">
-                <summary aria-haspopup="listbox">Телефон</summary>
-                <ul role="listbox">
-                    <li><a>+380 97 777 77 77</a></li>
-                    <li><a>+380 98 888 88 88</a></li>
-                    <li><a>+380 99 999 99 99</a></li>
-                </ul>
-            </details>
-
-            <details role="list">
-                <summary aria-haspopup="listbox">Товар</summary>
-                <ul role="listbox">
-                    <li><a>Хліб</a></li>
-                    <li><a>Масло</a></li>
-                    <li><a>Сіль</a></li>
-                </ul>
-            </details>
-
-            <details role="list">
-                <summary aria-haspopup="listbox">Місто</summary>
-                <ul role="listbox">
-                    <li><a>Авдіївка</a></li>
-                    <li><a>Бахмут</a></li>
-                    <li><a>Маріуполь</a></li>
-                </ul>
-            </details>
-        </div> -->
 
          <div class="block-filter grid">
 
-            <div class="city-filt">
-               <select name="" id="inputCity" class="select__city" placeholder="Виберіть місто">
-                  <option  hidden>Виберіть місто</option>
-                  <option value="367">Київ</option>
-                  <option value="340">Черкаси</option>
-                  <option value="369">Умань</option>
-                  <option value="370">Сталінград</option>
-                  <option value="371">Агидель</option>
-               </select>
-            </div>
+            <!-- <div class="select-box">
+               <div class="select-option">
+                   <input type="text" placeholder="Виберіть місто" id="soValue" readonly name="">
+               </div>
+               <div class="content">
+                   <div class="search">
+                       <input type="text" id="optionSearch" placeholder="Введіть назву міста" name="">
+                   </div>
+                   <ul class="options">
+                       <li>Київ</li>
+                       <li>Луцьк</li>
+                       <li>Чернівці</li>
+                       <li>Одеса</li>
+                       <li>Чернігів</li>
+                       <li>Харків</li>
+                       <li>Львів</li>
+                       <li>Дніпро</li>
+                   </ul>
+               </div>
+           </div>
 
-            <div class="name-filter">
-               <select name="" id="inputName" class="selectname" placeholder="Напишіть ім'я">
-                  <option  hidden>Виберіть ім'я</option>
-                  <option value="">Оля</option>
-                  <option value="">Влад</option>
-                  <option value="">Олексій</option>
-                  <option value="">Адель</option>
-                  <option value="">Олександр</option>
-               </select>
-            </div>
-
-            <div class="goods-filter">
-               <select name="Товар" id="inputGoods" class="inputgoods" placeholder="Виберіть товар">
-                  <option  hidden>Виберіть товар</option>
-                  <option value="367">Iphone Xs</option>
-                  <option value="340">MacBook AIR PRO</option>
-                  <option value="369">Power lighting</option>
-                  <option value="370">Chose</option>
-                  <option value="371">Bread</option>
-               </select>
+            <div class="select-box select-box-two">
+               <div class="select-option select-option-two">
+                  <input type="text" placeholder="Пошук товару" id="soValue soValueTwo" readonly name="">
+               </div>
+               <div class="content">
+                  <div class="search">
+                     <input type="text" id="optionSearch optionSearchTwo" placeholder="Пошук товару..." name="">
+                  </div>
+                  <ul class="options opions-two">
+                     <li>MacBook Pro</li>
+                     <li>Iphone 15 pro</li>
+                     <li>EarPods</li>
+                     <li>AirPods</li>
+                     <li>lighting type-c</li>
+                     <li>Чехол</li>
+                     <li>булка з маком</li>
+                     <li>порваний носок</li>
+                  </ul>
+               </div>
+            </div> -->
+            <div class="select-box one">
+               <div class="select-option one2">
+                   <input type="text" placeholder="Оберіть місто" id="soValue" readonly name="">
+               </div>
+               <div class="content">
+                   <div class="search">
+                       <input type="text" id="optionSearch" placeholder="Пошук міста" name="">
+                   </div>
+                   <ul class="options one4">
+                       <li>Київ</li>
+                       <li>Луцьк</li>
+                       <li>Чернівці</li>
+                       <li>Одеса</li>
+                       <li>Чернігів</li>
+                       <li>Харків</li>
+                       <li>Львів</li>
+                       <li>Дніпро</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="select-box two">
+               <div class="select-option two2">
+                   <input type="text" placeholder="Оберіть товар" id="soValue-2" readonly name="">
+               </div>
+               <div class="content">
+                   <div class="search">
+                       <input type="text" id="optionSearch-2" placeholder="Пошук товару..." name="">
+                   </div>
+                   <ul class="options two4">
+                     <li>MacBook Pro</li>
+                     <li>Iphone 15 pro</li>
+                     <li>EarPods</li>
+                     <li>AirPods</li>
+                     <li>lighting type-c</li>
+                     <li>Чехол</li>
+                     <li>булка з маком</li>
+                     <li>порваний носок</li>
+                   </ul>
+               </div>
+           </div>
+            <div class="box-name">
+               <input type="text" class="filter-name" id="filterName" placeholder="Ім'я">
             </div>
 
             <!-- Кнопка фильтрации  -->
@@ -153,7 +177,7 @@
    <script type="module" src="scripts/soldGoods/addSoldGoods.js"></script>
    <script type="module" src="scripts/soldGoods/showSoldGoods.js"></script>
    <script type="module" src="scripts/windowsScrollUp.js"></script>
-   <!-- <script type="module" src="/node_modules/@selectize/selectize/dist/js/selectize.min.js"></script> -->
+   <script type="module" src="scripts/soldGoods/filterSoldGoods.js"></script>
 </body>
 
 </html>
